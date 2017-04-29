@@ -1,0 +1,36 @@
+name: Early Differentiation of Neural Crest into different lineages
+abbreviation: DifferentiationNeuralCrest
+
+parent_analysis:
+  type: Level1
+  kwargs:
+    target: All
+    time: E7-E18
+
+include:
+  auto-annotations:
+    - CNC
+    - FrontM
+    - SCHWA
+    - PSN
+    - CrNerv
+  categories: None
+  classifier: None
+
+exclude:
+  auto-annotations:
+    - GUM
+    - ["@CC", MHBm]
+  categories: None
+  classifier: None
+
+timepoints:
+  - E8
+  - E9
+  - E10
+  - E11
+  - E12
+
+comments: |
+  PLEASE insert a extra information.
+  This can be multiline
