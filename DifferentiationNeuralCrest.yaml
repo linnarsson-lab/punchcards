@@ -14,15 +14,11 @@ include:
     - SCHWA
     - PSN
     - CrNerv
-  categories: None
-  classifier: None
 
 exclude:
   auto-annotations:
     - GUM
     - ["@CC", MHBm]
-  categories: None
-  classifier: None
 
 timepoints:
   - E8

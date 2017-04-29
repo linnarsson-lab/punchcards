@@ -1,0 +1,24 @@
+name: Process name extended
+abbreviation: ProcessName
+
+parent_analysis:
+  type: TypeOfAnalysis
+  kwargs: Dict
+
+include:
+  auto-annotations: all
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+comments: |
+  PLEASE insert a extra information.
+  This can be multiline
