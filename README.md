@@ -70,10 +70,20 @@ This entries describe the filtering that is performed on the cells.
 Any of those options can be omitted, in that case the value will use the default value. Defaults values are the ones described by the `Model.yaml` file.
 
 `include` is a dictionary of including conditions with default `all`. The different types of conditions are combined by a set union operator.
-    `auto-annotations` list, use the autoannotations contained in .aa.tab to filter clusters 
+    `auto-annotations` list, use the autoannotations contained in .aa.tab to filter clusters. 
     `categories`: list, use categories to filter set of clusters that contain a certain category attribute
     `classes`: list,  use the classifier probability found in the loom file (prob>0.5)
     `clusters`: list,  use the cluster numbering to filter (NOTE!!! makes sense only when the source file is only one)
+    
+    NOTE: for now only `auto-annotations` supports the and logical operator that is expressed providing a list. For example:
+
+    ```yaml
+    auto-annotations:
+    - GUM
+    - ["@CC", MHBm]
+    ```
+
+    Coresponds to the filter `GUM ∪ ( @CC ∩ MHBm )`
 
 `exclude` the same as include but for excluding. default is `none`. The different types of negative conditions are combined by a set union operator.
 
@@ -89,3 +99,47 @@ By default (hard-coded) ClusterLayoutProcess, AutoAnnotateProcess will be run fo
 ## Comment section
 
 You can add here description of the process and relevant litterature
+
+## Real-World Example
+
+```yaml
+name: Early Differentiation of Neural Crest into different lineages
+abbreviation: DifferentiationNeuralCrest
+
+parent_analysis:
+  type: Level1
+  kwargs:
+    target: All
+    time: E7-E18
+
+include:
+  auto-annotations:
+    - CNC
+    - FrontM
+    - SCHWA
+    - PSN
+    - CrNerv
+
+exclude:
+  auto-annotations:
+    - GUM
+    - ["@CC", MHBm]
+
+timepoints:
+  - E8
+  - E9
+  - E10
+  - E11
+  - E12
+
+todo_analysis:
+- type: PlotGraphProcess
+  kwargs: {}
+- type: PlotGraphAgeProcess
+  kwargs: {}
+
+comments: |
+  PLEASE insert a extra information.
+  This can be multiline
+
+```
