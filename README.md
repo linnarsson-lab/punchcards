@@ -70,20 +70,20 @@ This entries describe the filtering that is performed on the cells.
 Any of those options can be omitted, in that case the value will use the default value. Defaults values are the ones described by the `Model.yaml` file.
 
 `include` is a dictionary of including conditions with default `all`. The different types of conditions are combined by a set union operator.
-    `auto-annotations` list, use the autoannotations contained in .aa.tab to filter clusters. 
-    `categories`: list, use categories to filter set of clusters that contain a certain category attribute
-    `classes`: list,  use the classifier probability found in the loom file (prob>0.5)
-    `clusters`: list,  use the cluster numbering to filter (NOTE!!! makes sense only when the source file is only one)
+    - `auto-annotations` list, use the autoannotations contained in .aa.tab to filter clusters. 
+    - `categories`: list, use categories to filter set of clusters that contain a certain category attribute
+    - `classes`: list,  use the classifier probability found in the loom file (prob>0.5)
+    - `clusters`: list,  use the cluster numbering to filter (NOTE!!! makes sense only when the source file is only one)
     
-    NOTE: for now only `auto-annotations` supports the and logical operator that is expressed providing a list. For example:
+NOTE: for now only `auto-annotations` supports the and logical operator that is expressed providing a list. For example:
 
-    ```yaml
-    auto-annotations:
-    - GUM
-    - ["@CC", MHBm]
-    ```
+```yaml
+auto-annotations:
+- GUM
+- ["@CC", MHBm]
+```
 
-    Coresponds to the filter `GUM ∪ ( @CC ∩ MHBm )`
+Coresponds to the filter `GUM ∪ ( @CC ∩ MHBm )`
 
 `exclude` the same as include but for excluding. default is `none`. The different types of negative conditions are combined by a set union operator.
 
