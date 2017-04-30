@@ -2,8 +2,10 @@ name: Process name extended
 abbreviation: ProcessName
 
 parent_analysis:
-  type: TypeOfAnalysis
-  kwargs: Dict
+  type: Level1
+  kwargs:
+    target: All
+    time: E7-E18
 
 include:
   auto-annotations: all
@@ -18,6 +20,10 @@ exclude:
   clusters: none
 
 timepoints: all
+
+todo_analysis:
+- type: PlotGraphProcess
+  kwargs: {}
 
 comments: |
   PLEASE insert a extra information.
