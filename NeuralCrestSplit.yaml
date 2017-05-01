@@ -1,0 +1,29 @@
+name: Neural Crest differentiation more detailed split
+abbreviation: NeuralCrestSplit
+
+parent_analysis:
+  type: StudyProcess
+  kwargs:
+    processname: DifferentiationNeuralCrest
+
+include:
+  auto-annotations:
+    - HinNC
+    - MesNC
+    - DelaNC
+
+timepoints:
+  - E8
+  - E9
+  - E10
+  - E11
+
+todo_analysis:
+- type: PlotGraphProcess
+  kwargs: {}
+- type: PlotGraphAgeProcess
+  kwargs: {}
+
+comments: |
+  PLEASE insert a extra information.
+  This can be multiline
