@@ -1,8 +1,8 @@
 name: Neural Crest differentiation more detailed split
 abbreviation: NeuralCrestSplit
 
-parent_analysis:
-  type: StudyProcess
+parent_analyses:
+- type: StudyProcess
   kwargs:
     processname: DifferentiationNeuralCrest
 
@@ -18,7 +18,7 @@ timepoints:
   - E10
   - E11
 
-todo_analysis:
+todo_analyses:
 - type: PlotGraphProcess
   kwargs: {}
 - type: PlotGraphAgeProcess

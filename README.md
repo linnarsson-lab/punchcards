@@ -21,8 +21,8 @@ A `.yaml` process description file looks like this:
 name: Process name extended
 abbreviation: ProcessName
 
-parent_analysis:
-  type: Level1
+parent_analyses:
+- type: Level1
   kwargs:
     target: All
     time: E7-E18
@@ -41,18 +41,19 @@ exclude:
 
 timepoints: all
 
-todo_analysis:
+todo_analyses:
 - type: PlotGraphProcess
   kwargs: {}
 
 comments: |
   PLEASE insert a extra information.
   This can be multiline
+
 ```
 
-### Parent Analysis entry
+### Parent Analyses entry
 
-The parent analysis entry describes the `luigi.WrapperTask` that generates the input files for the current StudyProcess analysis. *StudyProcess* will make use of the .loom output files and the .aa.tab autoannotation files to filter cells. Filtering is specified in the exclude/include/timepoints entries.
+The parent analysis entry describes a list of `luigi.WrapperTask` that generates the inputs files for the current StudyProcess analysis. *StudyProcess* will make use of the .loom output files and the .aa.tab autoannotation files to filter cells. Filtering is specified in the exclude/include/timepoints entries.
 
 `type` is the parent analysis name as defined in cytograph. This is required to be a `luigi.WrapperTask` and its use needs to be enabled in cytograph.
 
@@ -104,8 +105,8 @@ You can add here description of the process and relevant litterature
 name: Early Differentiation of Neural Crest into different lineages
 abbreviation: DifferentiationNeuralCrest
 
-parent_analysis:
-  type: Level1
+parent_analyses:
+- type: Level1
   kwargs:
     target: All
     time: E7-E18
@@ -130,7 +131,7 @@ timepoints:
   - E11
   - E12
 
-todo_analysis:
+todo_analyses:
 - type: PlotGraphProcess
   kwargs: {}
 - type: PlotGraphAgeProcess
@@ -139,5 +140,6 @@ todo_analysis:
 comments: |
   PLEASE insert a extra information.
   This can be multiline
+
 
 ```

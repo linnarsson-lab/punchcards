@@ -1,8 +1,8 @@
 name: Process name extended
 abbreviation: ProcessName
 
-parent_analysis:
-  type: Level1
+parent_analyses:
+- type: Level1
   kwargs:
     target: All
     time: E7-E18
@@ -21,7 +21,7 @@ exclude:
 
 timepoints: all
 
-todo_analysis:
+todo_analyses:
 - type: PlotGraphProcess
   kwargs: {}
 

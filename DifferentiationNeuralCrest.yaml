@@ -1,8 +1,8 @@
 name: Early Differentiation of Neural Crest into different lineages
 abbreviation: DifferentiationNeuralCrest
 
-parent_analysis:
-  type: Level1
+parent_analyses:
+- type: Level1
   kwargs:
     target: All
     time: E7-E18
@@ -27,7 +27,7 @@ timepoints:
   - E11
   - E12
 
-todo_analysis:
+todo_analyses:
 - type: PlotGraphProcess
   kwargs: {}
 - type: PlotGraphAgeProcess
