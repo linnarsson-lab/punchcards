@@ -9,13 +9,13 @@ dev-processes aims at containing a complete collection of all the analysis perfo
 
 Analysis description files are .yaml files containing all the information required to run a cytograph-luigi *StudyProcess* analysis.
  
-It is possible to run an Process analysis as following:
+It is possible to run an analysis as following:
 
 ```bash
 nohup luigi --workers 5 --local-scheduler --module cytograph StudyProcess --processname DifferentiationNeuralCrest > nohup.out &
 ```
 
-below a model for analysis
+A `.yaml` process description file looks like this:
 
 ```yaml
 name: Process name extended
@@ -54,13 +54,13 @@ comments: |
 
 The parent analysis entry describes the `luigi.WrapperTask` that generates the input files for the current StudyProcess analysis. *StudyProcess* will make use of the .loom output files and the .aa.tab autoannotation files to filter cells. Filtering is specified in the exclude/include/timepoints entries.
 
-`type` is the parent analysis name as defined in cytograph. This is required to be a luigi wrapper task (i.e. inherits from luigi.WrapperTask) and its use needs to be enabled in cytograph.
+`type` is the parent analysis name as defined in cytograph. This is required to be a `luigi.WrapperTask` and its use needs to be enabled in cytograph.
 
 `kwargs` are the keyword arguments used to call the parent-analysis. If it not required the parent should be `kwargs: {}`
 
 In the current version it is also assumed that the `luigi.WrapperTask.requires()` method returns an iterator of tuples `type: Iterator[Tuple[luigi.Task, luigi.Task, ...]]`. Where the order of the tasks is:
 
-* first a ClusterLayout-like taks (or any taks outputing a .loom with the `Age`, `Class_*` and `Clusters` column attribute
+* first a *ClusterLayout*-like task (or any task outputing a .loom file with the `Age`, `Class_*` and `Clusters` column attribute
 * second  AutoAnnotate-like tasks (or any task outputing a .aa.tab file)
 * others... the order does not matter
 
@@ -84,13 +84,13 @@ NOTE: for now only `auto-annotations` supports the `and` logical operator. This 
 
 `exclude` the same as include but for excluding. default is `none`. The different types of negative conditions are combined by a set union operator.
 
-`timepoints` takes a list of entries, range are not supported yet
+`timepoints` takes a list of entries, ranges are not supported yet
 
 The *final* filter is `(include - exclude) ∩ timepoints`
 
 ## Todo Analysis
 
-It describe in a list of lugi.Task to be performed. They are specified similarly to the `parent_analysis`.
+It describe in a list of *lugi.Task* to be performed. They are specified as in `parent_analysis`.
 
 By default (hard-coded) *ClusterLayoutProcess*, *AutoAnnotateProcess* will be run for every process.
 
@@ -98,7 +98,7 @@ By default (hard-coded) *ClusterLayoutProcess*, *AutoAnnotateProcess* will be ru
 
 You can add here description of the process and relevant litterature
 
-## Real-World Example
+## Example of a real analysis
 
 ```yaml
 name: Early Differentiation of Neural Crest into different lineages
