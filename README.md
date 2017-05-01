@@ -2,12 +2,12 @@
 
 dev-processes is repository containing cytograph analysis description files.
 
-dev-processes contains aims at containing a complete collections on all the analysis performed on the developmental brain atlas dataset.
+dev-processes aims at containing a complete collection of all the analysis performed on the developmental brain atlas dataset.
 
 
 ## Analysis description files
 
-Analysis description file are .yaml files that contain all the information to run a cytograph-luigi Process analysis.
+Analysis description files are .yaml files containing all the information required to run a cytograph-luigi *StudyProcess* analysis.
  
 It is possible to run an Process analysis as following:
 
@@ -50,15 +50,15 @@ comments: |
   This can be multiline
 ```
 
-### Parent Analysis field
+### Parent Analysis entry
 
-The parent analysis field aims at describing the parent analyses that generates the input files by the Process analysis. The StudyProcess will pool all from the .loom output files of the parent analysis, and will make use of the .aa.tab autoannotation files to filter cellsusing the exclude/include/timepoints conditions.
+The parent analysis entry describes the `luigi.WrapperTask` that generates the input files for the current StudyProcess analysis. *StudyProcess* will make use of the .loom output files and the .aa.tab autoannotation files to filter cells. Filtering is specified in the exclude/include/timepoints entries.
 
-`type` is the parent analysis name as defined in cytograph. This is required to be a luigi wrapper task (i.e. inherits from luigi.WrapperTask).
+`type` is the parent analysis name as defined in cytograph. This is required to be a luigi wrapper task (i.e. inherits from luigi.WrapperTask) and its use needs to be enabled in cytograph.
 
-`kwargs` are the keyword arguments used to call the parent-analysis. If it not required the parent can should be `kwargs: {}`
+`kwargs` are the keyword arguments used to call the parent-analysis. If it not required the parent should be `kwargs: {}`
 
-In the current version it is also assumed that the wrapper-task `.requires()` method returns an iterator of tuples containing Iterator[Tuple[luigi.Task, luigi.Task, ...]]. Where the order of the tasks is:
+In the current version it is also assumed that the `luigi.WrapperTask.requires()` method returns an iterator of tuples `type: Iterator[Tuple[luigi.Task, luigi.Task, ...]]`. Where the order of the tasks is:
 
 * first a ClusterLayout-like taks (or any taks outputing a .loom with the `Age`, `Class_*` and `Clusters` column attribute
 * second  AutoAnnotate-like tasks (or any task outputing a .aa.tab file)
@@ -68,32 +68,31 @@ In the current version it is also assumed that the wrapper-task `.requires()` me
 
 This entries describe the filtering that is performed on the cells.
 
-Any of those options can be omitted, in that case the value will use the default value. Defaults values are the ones described by the `Model.yaml` file.
+Any of the options below can be omitted, in that case the value will use the default value. Defaults values are described by the `Model.yaml` file.
 
-* `include` is a dictionary of including conditions with default `all`. The different types of conditions are combined by a set union operator.
+* `include` is a dictionary that specify wich cell to include, the default is `all`. The different types of conditions are combined by a set union operator.
 * `auto-annotations` list, use the autoannotations contained in .aa.tab to filter clusters.  
-NOTE: for now only `auto-annotations` supports the and logical operator that is expressed providing a list. For example:  
+NOTE: for now only `auto-annotations` supports the `and` logical operator. This can be expressed providing a list instead of a string. For example the following example coresponds to the filter `GUM ∪ ( @CC ∩ MHBm )`
 
         auto-annotations:
         - GUM
         - ["@CC", MHBm]
-Coresponds to the filter `GUM ∪ ( @CC ∩ MHBm )`
+
 * `categories`: list, use categories to filter set of clusters that contain a certain category attribute
 * `classes`: list,  use the classifier probability found in the loom file (prob>0.5)
 * `clusters`: list,  use the cluster numbering to filter (NOTE!!! makes sense only when the source file is only one)
-    
-
 
 `exclude` the same as include but for excluding. default is `none`. The different types of negative conditions are combined by a set union operator.
 
 `timepoints` takes a list of entries, range are not supported yet
 
-The final filter is `(include - exclude) ∩ timepoints`
+The *final* filter is `(include - exclude) ∩ timepoints`
 
-## TODO Analysis
+## Todo Analysis
 
-Describe in a list the set of analyses to be performed.
-By default (hard-coded) ClusterLayoutProcess, AutoAnnotateProcess will be run for every process
+It describe in a list of lugi.Task to be performed. They are specified similarly to the `parent_analysis`.
+
+By default (hard-coded) *ClusterLayoutProcess*, *AutoAnnotateProcess* will be run for every process.
 
 ## Comment section
 
