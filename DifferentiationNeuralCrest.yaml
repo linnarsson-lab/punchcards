@@ -17,7 +17,6 @@ include:
 
 exclude:
   auto-annotations:
-    - GUM
     - ["@CC", MHBm]
 
 timepoints:
