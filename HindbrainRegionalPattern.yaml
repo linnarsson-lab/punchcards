@@ -1,15 +1,18 @@
-name: Later Regional Patterning Radialglia and Neuroblast
-abbreviation: UlteriorRegionalPattern
+name: Later Regional Patterning Hindbrain
+abbreviation: HindbrainRegionalPattern
 
 parent_analyses:
-- type: RadialgliaLike
-  kwargs: {}
+- type: Level1
+  kwargs:
+    target: Hindbrain
+    time: E9-E11
 
 include:
   auto-annotations: all
-  categories: all
+  categories: Neuroectodermal
   classes: all
   clusters: all
+  tissues: all
 
 exclude:
   auto-annotations: none
