@@ -12,12 +12,14 @@ include:
   categories: all
   classes: all
   clusters: all
+  tissues: all
 
 exclude:
   auto-annotations: none
   categories: none
   classes: none
   clusters: none
+  tissues: none
 
 timepoints: all
 

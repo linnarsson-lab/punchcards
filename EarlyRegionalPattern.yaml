@@ -1,0 +1,30 @@
+name: Early regional patterning
+abbreviation: EarlyRegionalPattern
+
+parent_analyses:
+- type: RadialgliaLike
+  kwargs: {}
+
+include:
+  auto-annotations: all
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints:
+ - E9
+
+todo_analyses:
+- type: PlotGraphProcess
+  kwargs: {}
+
+comments: |
+  More specific areas of the brain being defined aafter the anterioposterior patterning has been set 
+  We start from the analyis RadialGlia Lineage. 
+  To do analyses to add -> when it becomes available we should train a classifier on the clusters at this level.
