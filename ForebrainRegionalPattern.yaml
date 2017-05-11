@@ -12,7 +12,7 @@ include:
   categories: Neuroectodermal
   classes: all
   clusters: all
-  tissues: all # Forebrain is already in Level1 so here it would be redundant
+  tissues: all
 
 exclude:
   auto-annotations: none
