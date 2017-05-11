@@ -9,7 +9,7 @@ parent_analyses:
 
 include:
   auto-annotations: all
-  categories: Neuroectodermal
+  categories: all
   classes: all
   clusters: all
   tissues: all
@@ -19,6 +19,7 @@ exclude:
   categories: none
   classes: none
   clusters: none
+  tissues: none
 
 timepoints:
  - E10
