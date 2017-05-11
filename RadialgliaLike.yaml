@@ -9,7 +9,8 @@ parent_analyses:
 
 include:
   auto-annotations: all
-  categories: Radialglialike
+  categories:
+   - Radialglialike
   classes: all
   clusters: all
 
