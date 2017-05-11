@@ -9,7 +9,8 @@ parent_analyses:
 
 include:
   auto-annotations: all
-  categories: Neuroectodermal
+  categories:
+   - Neuroectodermal
   classes: all
   clusters: all
   tissues: all
