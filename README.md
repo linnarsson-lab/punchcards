@@ -7,7 +7,7 @@
 
 ## Analysis description files
 
-a `punchcard` is ``.yaml`` file taht contains all the information required to run a cytograph-luigi *Punchcard* analysis.
+A `punchcard` is ``.yaml`` file that contains all the information required to run a cytograph-luigi *Punchcard* analysis.
  
 It is possible to run an analysis as following:
 
