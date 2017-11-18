@@ -1,9 +1,11 @@
-# cg-punchcards
+# Punchcards
 
-``cg-punchcards`` is a repository containing description files to feed to cytograph `puchcards` analysis pipeline.
+``punchcards`` is a repository containing description files to feed to cytograph `punchcards` analysis pipeline.
 
-``cg-punchcards`` will contain a complete collection of all the sub-analysis performed on the developmental brain atlas dataset.
+``punchcards`` will contain a complete collection of all the sub-analysis performed on the developmental brain atlas dataset.
 
+# Curiosity/History
+[Punch cards]((https://en.wikipedia.org/wiki/Punched_card#History)) were one of the first means to store digital information, in particular automata instructions/inputs. Noticeably the earliest automatic [loom](https://github.com/linnarsson-lab/loompy) was controlled by punched holes in a paper tape.
 
 ## Analysis description files
 
@@ -21,7 +23,7 @@ A `punchcard` looks like this:
 name: Process name extended
 abbreviation: ProcessName
 
-parent_analyses:
+requires:
 - type: Level1
   kwargs:
     target: All
@@ -41,7 +43,7 @@ exclude:
 
 timepoints: all
 
-todo_analyses:
+run:
 - type: PlotGraphProcess
   kwargs: {}
 
