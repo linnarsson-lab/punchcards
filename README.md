@@ -1,21 +1,21 @@
-# dev-processes
+# cg-punchcards
 
-dev-processes is repository containing cytograph analysis description files.
+``cg-punchcards`` is a repository containing description files to feed to cytograph `puchcards` analysis pipeline.
 
-dev-processes aims at containing a complete collection of all the analysis performed on the developmental brain atlas dataset.
+``cg-punchcards`` will contain a complete collection of all the sub-analysis performed on the developmental brain atlas dataset.
 
 
 ## Analysis description files
 
-Analysis description files are .yaml files containing all the information required to run a cytograph-luigi *StudyProcess* analysis.
+a `punchcard` is ``.yaml`` file taht contains all the information required to run a cytograph-luigi *Punchcard* analysis.
  
 It is possible to run an analysis as following:
 
 ```bash
-nohup luigi --workers 5 --local-scheduler --module cytograph StudyProcess --processname DifferentiationNeuralCrest > nohup.out &
+nohup luigi --workers 5 --local-scheduler --module cytograph Punchcard --card DifferentiationNeuralCrest > nohup.out &
 ```
 
-A `.yaml` process description file looks like this:
+A `punchcard` looks like this:
 
 ```yaml
 name: Process name extended
@@ -50,6 +50,8 @@ comments: |
   This can be multiline
 
 ```
+
+# Note: the doc below is outdated
 
 ### Parent Analyses entry
 
