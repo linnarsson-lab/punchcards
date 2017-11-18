@@ -10,18 +10,19 @@
 ## Analysis description files
 
 A `punchcard` is ``.yaml`` file that contains all the information required to run a cytograph-luigi *Punchcard* analysis.
+(Note: The *Punchcard* lugig analysis is being refactored and it is currently broken).
  
 It is possible to run an analysis as following:
 
 ```bash
-nohup luigi --workers 5 --local-scheduler --module cytograph Punchcard --card DifferentiationNeuralCrest > nohup.out &
+luigi --workers 5 --local-scheduler --module development-mouse Punchcard --card DifferentiationNeuralCrest
 ```
 
 A `punchcard` looks like this:
 
 ```yaml
-name: Process name extended
-abbreviation: ProcessName
+name: Punchcard name extended
+abbreviation: PunchcardName
 
 requires:
 - type: Level1
