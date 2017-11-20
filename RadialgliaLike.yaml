@@ -1,7 +1,7 @@
 name: The Radialglia-like cells analysis
 abbreviation: RadialgliaLike
 
-parent_analyses:
+require:
 - type: Level1
   kwargs:
     target: All
@@ -22,10 +22,8 @@ exclude:
 
 timepoints: all
 
-todo_analyses:
-- type: PlotGraphProcess
-  kwargs: {}
-- type: PlotGraphAgeProcess
+run:
+- type: VisualizeVelocityPunchcard
   kwargs: {}
 
 comments: |
