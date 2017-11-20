@@ -1,7 +1,7 @@
 name: Process name extended
 abbreviation: ProcessName
 
-requires:
+require:
 - type: Level1
   kwargs:
     target: All
