@@ -27,6 +27,5 @@ timepoints: all
 run:
 
 comments: |
-  Radialglia-like cells on the basis of quite general autoannotation are pooled in a single file and analyzed
-  to call autoannotaiton.
-  This file is also used a preferencial source for all the analysis that start from this kind of cells.
+  Neuroectodermal cells
+  Selected using categories
