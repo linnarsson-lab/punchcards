@@ -24,8 +24,6 @@ exclude:
 timepoints: all
 
 run:
-- type: PlotGraphProcess
-  kwargs: {}
 
 comments: |
   PLEASE insert a extra information.

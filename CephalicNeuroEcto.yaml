@@ -1,0 +1,32 @@
+name: Selectign the Neural cell types from Cephalic dataset
+abbreviation: CephalicNeuroEcto
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: Cephalic_E7-8
+- type: ExportL1
+  kwargs:
+    tissue: Cephalic_E7-8
+
+include:
+  auto-annotations: all
+  categories:
+   - Neuroectodermal
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  Radialglia-like cells on the basis of quite general autoannotation are pooled in a single file and analyzed
+  to call autoannotaiton.
+  This file is also used a preferencial source for all the analysis that start from this kind of cells.
