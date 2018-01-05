@@ -19,7 +19,7 @@ include:
 exclude:
   auto-annotations: none
   categories:
-    - Enodmesodermal
+    - Endomesodermal
   classes: none
   clusters: none
 
