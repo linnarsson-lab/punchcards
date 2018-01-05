@@ -27,8 +27,6 @@ timepoints: all
 
 run:
 - type: VisualizeVelocityPunchcard
-  kwargs:
-      card: CephalicFiltered
 
 comments: |
   Neuroectodermal cells
