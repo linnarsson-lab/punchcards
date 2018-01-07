@@ -4,7 +4,7 @@ abbreviation: EarlyNeuralTube
 require:
 - type: Punchcard
   kwargs:
-    tissue: CephalicFiltered
+    card: CephalicFiltered
 
 include:
   auto-annotations:
