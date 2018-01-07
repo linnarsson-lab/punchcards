@@ -1,0 +1,28 @@
+name: Early Neural tube patterning
+abbreviation: EarlyNeuralTube
+
+require:
+- type: Punchcard
+  kwargs:
+    tissue: CephalicFiltered
+
+include:
+  auto-annotations:
+    - "@EarlyNT"
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+- type: VisualizeVelocityPunchcard
+
+comments: |
+  Subpopulation of CephalicFiltered with the class Early neaural tube
