@@ -1,0 +1,31 @@
+name: Anterior progenitors / Early Forbrain
+abbreviation: EarlyForebrain
+
+require:
+- type: Punchcard
+  kwargs:
+    card: EarlyNeuralTube
+
+include:
+  auto-annotations: all
+  categories:
+   - Forebrain
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories:  # Redundant
+    - Midbrain
+    - Hindbrain
+    - Spinal
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+- type: VisualizeVelocityPunchcard
+
+comments: |
+  Subpopulation of EarlyNeuralTube that mathces patterning autoannotation that are anterior
