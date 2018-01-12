@@ -1,5 +1,5 @@
 name: Selectign the Neural cell types from Hindbrain E9-E11
-abbreviation: HindbrainEarlyFiltered
+abbreviation: HindbrainE911Filtered
 
 require:
 - type: ClusterL1

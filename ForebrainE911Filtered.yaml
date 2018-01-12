@@ -1,13 +1,13 @@
-name: Selectign the Neural cell types from Midbrain E9-E11
-abbreviation: MidbrainEarlyFiltered
+name: Selectign the Neural cell types from Forebrain E9-E11
+abbreviation: ForebrainE911Filtered
 
 require:
 - type: ClusterL1
   kwargs:
-    tissue: Midbrain_E9-11
+    tissue: Forebrain_E9-11
 - type: ExportL1
   kwargs:
-    tissue: Midbrain_E9-11
+    tissue: Forebrain_E9-11
 
 include:
   auto-annotations: all
