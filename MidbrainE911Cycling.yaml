@@ -1,0 +1,29 @@
+name: Selectign the Cycling Neural cells from Midbrain E9-E11
+abbreviation: MidbrainE911Cycling
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE911Filtered
+
+include:
+  auto-annotations:
+    - "@CC"
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none  # I could exclude Endomesodermal but it should never overlap with Neuroectodermal is autoannotations are good
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+- type: VisualizeVelocityPunchcard
+
+comments: |
+  Neuroectodermal cells that are cycling (population-wise)
+  Selected using autoannotion @CC
