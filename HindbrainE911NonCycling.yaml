@@ -1,5 +1,5 @@
-name: Selectign the Cicling Neural cells from Hindbrain E9-E11
-abbreviation: HindbrainE911Cicling
+name: Selectign the Non Cycling Neural cells from Hindbrain E9-E11
+abbreviation: HindbrainE911NonCycling
 
 require:
 - type: Punchcard
@@ -7,14 +7,14 @@ require:
     card: HindbrainE911Filtered
 
 include:
-  auto-annotations:
-    - "@CC"
+  auto-annotations: all
   categories: all
   classes: all
   clusters: all
 
 exclude:
-  auto-annotations: none
+  auto-annotations:
+    - "@CC"
   categories: none  # I could exclude Endomesodermal but it should never overlap with Neuroectodermal is autoannotations are good
   classes: none
   clusters: none
@@ -26,4 +26,4 @@ run:
 
 comments: |
   Neuroectodermal cells that are cycling (population-wise)
-  Selected using autoannotion @CC
+  Exclusion using autoannotion @CC
