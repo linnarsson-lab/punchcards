@@ -1,5 +1,5 @@
 name: Selecting the Neural cell types from Hindbrain E12-E15
-abbreviation: HindbrainE91215Filtered
+abbreviation: HindbrainE1215Filtered
 
 require:
 - type: ClusterL1
