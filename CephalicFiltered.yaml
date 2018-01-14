@@ -1,4 +1,4 @@
-name: Selectign the Neural cell types from Cephalic dataset
+name: Selecting the Neural cell types from Cephalic dataset
 abbreviation: CephalicFiltered
 
 require:
