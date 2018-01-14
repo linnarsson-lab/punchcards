@@ -1,0 +1,29 @@
+name: Selectign the Non Cycling Neural cells from Forebrain E9-E11
+abbreviation: ForebrainE911NonCycling
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainE911Filtered
+
+include:
+  auto-annotations: all
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations:
+    - "@CC"
+  categories: none  # I could exclude Endomesodermal but it should never overlap with Neuroectodermal is autoannotations are good
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+- type: VisualizeVelocityPunchcard
+
+comments: |
+  Neuroectodermal cells that are cycling (population-wise)
+  Exclusion using autoannotion @CC
