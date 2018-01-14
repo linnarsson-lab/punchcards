@@ -8,12 +8,16 @@ require:
 
 include:
   auto-annotations: all
-  categories: neuronal
+  categories: 
+    - Neuronal
   classes: all
   clusters: all
 
 exclude:
-  auto-annotations: none
+  auto-annotations:
+    - "@AEP"
+    - "OPC"
+    - "COP"
   categories: none
   classes: none
   clusters: none
