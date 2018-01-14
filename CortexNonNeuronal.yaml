@@ -1,0 +1,31 @@
+name: Selecting non-neuronal cells from the neuroectodermal P7 Cortex
+abbreviation: CortexNonNeuronal
+
+require:
+- type: Punchcard
+  kwargs:
+    card: CortexFiltered
+
+include:
+  auto-annotations: 
+    - "@AEP"
+    - "OPC"
+    - "COP"
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+- type: VisualizeVelocityPunchcard
+
+comments: |
+  Non-neuronal cells from P7 Cortex already filtered for neuroectodermal
+  Selected using categories
