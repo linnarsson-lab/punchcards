@@ -1,0 +1,31 @@
+name: Selecting the Neural cell types from Hindbrain E16-E18
+abbreviation: HindbrainE1618FilteredDummy
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: Hindbrain_E16-18
+- type: ExportL1
+  kwargs:
+    tissue: Hindbrain_E16-18
+
+include:
+  auto-annotations: all
+  categories:
+    - Neuroectodermal
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none  # I could exclude Endomesodermal but it should never overlap with Neuroectodermal is autoannotations are good
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  This is identical to HindbrainE1618Filtered it is just a duplicate so that a 
+  different analysis is run and I originally intended to run it with --Clusterpunchcard-mainifold-learning 3
