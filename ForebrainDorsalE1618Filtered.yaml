@@ -1,13 +1,13 @@
-name: Selecting the Neural cell types from Forebrain E12-E15
-abbreviation: ForebrainE1215Filtered
+name: Selecting the Neural cell types from Forebrain Dorsal E16-E18
+abbreviation: ForebrainDorsalE1618Filtered
 
 require:
 - type: ClusterL1
   kwargs:
-    tissue: Forebrain_E12-15
+    tissue: ForebrainDorsal_E16-18
 - type: ExportL1
   kwargs:
-    tissue: Forebrain_E12-15
+    tissue: ForebrainDorsal_E16-18
 
 include:
   auto-annotations: all
