@@ -1,13 +1,13 @@
-name: Selecting the Neural cell types from Forebrain Ventrotalamic E16-E18
-abbreviation: ForebrainVentrotalamicE1618Filtered
+name: Selecting the Neural cell types from Forebrain Ventrothalamic E16-E18
+abbreviation: ForebrainVentrothalamicE1618Filtered
 
 require:
 - type: ClusterL1
   kwargs:
-    tissue: ForebrainVentrotalamic_E16-18
+    tissue: ForebrainVentrothalamic_E16-18
 - type: ExportL1
   kwargs:
-    tissue: ForebrainVentrotalamic_E16-18
+    tissue: ForebrainVentrothalamic_E16-18
 
 include:
   auto-annotations: all
