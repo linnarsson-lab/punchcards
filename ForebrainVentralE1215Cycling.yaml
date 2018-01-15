@@ -15,7 +15,7 @@ include:
 
 exclude:
   auto-annotations: none
-  categories: none  # I could exclude Endomesodermal but it should never overlap with Neuroectodermal is autoannotations are good
+  categories: none
   classes: none
   clusters: none
 
