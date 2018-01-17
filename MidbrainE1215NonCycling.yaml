@@ -1,0 +1,28 @@
+name: Selecting the Non Cycling Neuroectodermal cell types from Midbrain E12-E15
+abbreviation: MidbrainE1215NonCycling
+
+require:
+- type: Punchcard
+  kwargs:
+    tissue: MidbrainE1215Filtered-15
+
+include:
+  auto-annotations: all
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations:
+    - "@CC"
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  Non Cycling Neuroectodermal cells
+  Selected using categories

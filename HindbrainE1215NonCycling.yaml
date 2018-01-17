@@ -1,0 +1,28 @@
+name: Selecting the Non Cycling Neuroectodermal cell types from Hindbrain E12-E15
+abbreviation: HindbrainE1215NonCycling
+
+require:
+- type: Punchcard
+  kwargs:
+    tissue: HindbrainE1215Filtered
+
+include:
+  auto-annotations: all
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations:
+    - "@CC"
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  Non Cycling cells
+  Selected using categories
