@@ -7,9 +7,9 @@ require:
     card: MidbrainE1215Filtered
 
 include:
-  auto-annotations: all
-  categories:
+  auto-annotations:
     - "@CC"
+  categories: all
   classes: all
   clusters: all
 
