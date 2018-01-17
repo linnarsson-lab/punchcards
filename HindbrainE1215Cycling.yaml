@@ -4,7 +4,7 @@ abbreviation: HindbrainE1215Cycling
 require:
 - type: Punchcard
   kwargs:
-    tissue: HindbrainE1215Filtered
+    card: HindbrainE1215Filtered
 
 include:
   auto-annotations:
