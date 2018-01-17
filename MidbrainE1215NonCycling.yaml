@@ -4,7 +4,7 @@ abbreviation: MidbrainE1215NonCycling
 require:
 - type: Punchcard
   kwargs:
-    card: MidbrainE1215Filtered-15
+    card: MidbrainE1215Filtered
 
 include:
   auto-annotations: all
