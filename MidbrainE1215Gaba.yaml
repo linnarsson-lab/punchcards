@@ -1,0 +1,28 @@
+name: Selecting the Gabaergic Non Cycling Neuroectodermal cell types from Midbrain E12-E15
+abbreviation: MidbrainE1215Gaba
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE1215NonCycling
+
+include:
+  auto-annotations:
+    - "@GABA"
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  Gabaergic Non Cycling Neuroectodermal cells
+  Selected using categories

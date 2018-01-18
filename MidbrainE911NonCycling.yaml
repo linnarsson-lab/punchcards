@@ -25,5 +25,5 @@ run:
 - type: VisualizeVelocityPunchcard
 
 comments: |
-  Neuroectodermal cells that are cycling (population-wise)
+  Neuroectodermal cells that are not cycling (population-wise)
   Exclusion using autoannotion @CC
