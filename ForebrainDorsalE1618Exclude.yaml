@@ -1,0 +1,31 @@
+name: Selecting the Neural cell types from Forebrain Dorsal E16-E18
+abbreviation: ForebrainDorsalE1618Exclude
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: ForebrainDorsal_E16-18
+- type: ExportL1
+  kwargs:
+    tissue: ForebrainDorsal_E16-18
+
+include:
+  auto-annotations: all
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories:
+    - Endomesodermal 
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  Neuroectodermal cells by exclusion
+  Selected using categories
