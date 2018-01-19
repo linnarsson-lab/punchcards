@@ -1,0 +1,28 @@
+name: Selecting the Non Gluatamatergic Non Cycling Neuroectodermal cell types from Hindbrain E12-E15
+abbreviation: HindbrainE1215NonGlutamate
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215NonCycling
+
+include:
+  auto-annotations: all
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations:
+    - "@VGLUT2"
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  Non Gluatamatergic Non Cycling Neuroectodermal cells
+  Selected using categories
