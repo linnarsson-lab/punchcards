@@ -1,0 +1,17 @@
+name: Cleaned up Non Gluatamatergic cell types from Hindbrain E12-E15
+abbreviation: 
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215NonGlutamate
+
+exclude:
+  auto-annotations:
+    - HinSert
+    - Chrd
+    - Rgl
+
+comments: |
+  Non Gluatamatergic Non Cycling Neuroectodermal cells
+  Cleaned from contaminating cell types

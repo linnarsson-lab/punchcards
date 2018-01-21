@@ -1,0 +1,14 @@
+name: Radial glia from Hindbrain E12-E15
+abbreviation: HindbrainE1215Radialglia
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215NonGlutamate
+
+include:
+  auto-annotations:
+    - Rgl
+
+comments: |
+  Radialglia extracted from the analysis of Non Gluatamatergic Non Cycling Neuroectodermal cells
