@@ -1,0 +1,27 @@
+name: Selecting GABA neurons from Forebrain Ventrothalamic E16-18
+abbreviation: ForebrainVentrothalamicE1618GABA
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrothalamicE1618Filtered
+
+include:
+  auto-annotations:
+    - "@GABA"
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations: none
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run: 
+
+comments: |
+

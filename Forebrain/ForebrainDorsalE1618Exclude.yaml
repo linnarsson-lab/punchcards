@@ -25,6 +25,7 @@ exclude:
 timepoints: all
 
 run:
+- type: VisualizeVelocityPunchcard
 
 comments: |
   Neuroectodermal cells by exclusion

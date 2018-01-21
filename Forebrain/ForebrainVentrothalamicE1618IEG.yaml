@@ -1,0 +1,30 @@
+name: Selecting IEG neurons from Forebrain Ventrothalamic E16-18
+abbreviation: ForebrainVentrothalamicE1618IEG
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrothalamicE1618Filtered
+
+include:
+  auto-annotations:
+    - "IEG"
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations:
+    - "@GABA"
+    - "@VGLUT1"
+    - "@VGLUT2"
+    - "@VGLUT3"
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run: 
+
+comments: |
