@@ -1,5 +1,5 @@
 name: Cleaned up Non Gluatamatergic cell types from Hindbrain E12-E15
-abbreviation: 
+abbreviation: HindbrainE1215NonGlutClean
 
 require:
 - type: Punchcard
