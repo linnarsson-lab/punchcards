@@ -1,0 +1,20 @@
+name: Irregular selection 1 Midbrain E1215
+abbreviation: MidbrainE1215Irregular2
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE1215NonGabaClean
+
+include:
+  clusters:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+
+
+comments: |
+  This selection is very manual would not hold in a different analysis
