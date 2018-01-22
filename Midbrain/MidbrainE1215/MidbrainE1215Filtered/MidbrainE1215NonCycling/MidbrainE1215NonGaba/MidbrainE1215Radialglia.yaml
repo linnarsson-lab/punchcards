@@ -1,0 +1,17 @@
+name: Radialglia selected fron the non cycling cells of Midbrain E1215
+abbreviation: MidbrainE1215Radialglia
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE1215NonGaba
+
+include:
+  auto-annotations:
+    - Rgl
+
+
+
+comments: |
+  Radialiglia Non Gabaergic Non Cycling Neuroectodermal cells
+  Selected using autoannotation Rgl

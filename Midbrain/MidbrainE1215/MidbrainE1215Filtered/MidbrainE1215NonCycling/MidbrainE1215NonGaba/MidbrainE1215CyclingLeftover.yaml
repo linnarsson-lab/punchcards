@@ -1,0 +1,17 @@
+name: The cycling leftover from the non gaba non cycling cells of Midbrain E1215
+abbreviation: MidbrainE1215CyclingLeftover
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE1215NonGaba
+
+include:
+  auto-annotations:
+    - "@CC"
+
+
+
+comments: |
+  Radialiglia Non Gabaergic Non Cycling Neuroectodermal cells
+  Selected using autoannotation Rgl
