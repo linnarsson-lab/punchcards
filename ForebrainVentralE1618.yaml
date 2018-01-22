@@ -1,0 +1,13 @@
+name: Integrate Forebrain Ventrothalamic and Ventrolateral 
+abbreviation: ForebrainVentralE1618
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrothalamicE1618Filtered
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrolateralE1618Filtered
+
+comments: |
+  All filtered ventral types
