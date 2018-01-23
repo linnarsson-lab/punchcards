@@ -8,7 +8,7 @@ require:
 
 include:
   auto-annotations:
-    - "IEG"
+    - "@IEG"
   categories: all
   classes: all
   clusters: all

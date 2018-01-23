@@ -1,0 +1,15 @@
+name: Excitatory neurons from forebrain dorsal E16-18 filtered
+abbreviation: ForebrainDorsalE1618Excit
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618Exclude
+
+exclude:
+  auto-annotations:
+    - NblInh1
+    - VZone
+
+comments: |
+  excluding inhibitory neurons and progenitors using auto-annotation

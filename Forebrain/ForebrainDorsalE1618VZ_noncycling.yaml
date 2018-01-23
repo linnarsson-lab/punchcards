@@ -1,0 +1,31 @@
+name: Selecting the ventricular zone/Rgl type from Forebrain Dorsal E16-E18
+abbreviation: ForebrainDorsalE1618VZ_noncycling
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618Exclude
+
+include:
+  auto-annotations:
+    - VZone
+  categories: all
+  classes: all
+  clusters: all
+
+exclude:
+  auto-annotations:
+    - "@CC"
+  categories: none
+  classes: none
+  clusters: none
+
+timepoints: all
+
+run:
+
+comments: |
+  Cluster Rgl types futher
+  Selected using VZone autoannotation, also could have used Rgl
+
+

@@ -1,5 +1,5 @@
-name: Selecting the inhibitory neural cluster from Forebrain Dorsal E16-E18
-abbreviation: ForebrainDorsalE1618Inh
+name: Selecting the ventricular zone/Rgl type from Forebrain Dorsal E16-E18
+abbreviation: ForebrainDorsalE1618VZ_cycling
 
 require:
 - type: Punchcard
@@ -8,7 +8,7 @@ require:
 
 include:
   auto-annotations:
-    - "NblInh1"
+    - "@CC"
   categories: all
   classes: all
   clusters: all  
@@ -22,8 +22,7 @@ exclude:
 timepoints: all
 
 run: 
-- type: VisualizeVelocityPunchcard
 
 comments: |
-  Cluster inhibitory types futher
-  Selected using clusters
+  Cluster Rgl types futher
+  Selected using VZone autoannotation, also could have used Rgl
