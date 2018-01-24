@@ -1,0 +1,14 @@
+name: Migrating neurons from excitatory forebrain dorsal E16-18 
+abbreviation: ForebrainDorsalE1618Mig
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618Excit
+
+include:
+  auto-annotations:
+    - MigPyr
+
+comments: |
+   possible migratory pyramidal neurons in the cortex
