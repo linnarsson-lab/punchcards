@@ -1,0 +1,15 @@
+name: Posterior Gluatamatergic from Hindbrain E12-E15
+abbreviation: HindbrainE1215Posterior
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215Glutamate
+
+include:
+  auto-annotations:
+    - NbGlutDH
+
+comments: |
+  Neuroblast glutamatergic, maybe DH sensory Gluatamatergic Non Cycling Neuroectodermal cells
+  Selected using categories
