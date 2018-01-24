@@ -1,0 +1,14 @@
+name: Forebrain hippocampus from E16-18
+abbreviation: ForebrainDorsalE1618HC
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618Excit
+
+include:
+  auto-annotations:
+    - HC-CA-Dev
+
+comments: |
+  examining cluster of potential hippocampal neurons
