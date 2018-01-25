@@ -10,23 +10,14 @@ require:
     tissue: Cortex_P7
 
 include:
-  auto-annotations: all
+
   categories:
     - Neuroectodermal
-  classes: all
-  clusters: all
 
 exclude:
-  auto-annotations: none
   categories:
     - Endomesodermal
-  classes: none
-  clusters: none
 
-timepoints: all
-
-run:
-#- type: VisualizeVelocityPunchcard
 
 comments: |
   Neuroectodermal cells
