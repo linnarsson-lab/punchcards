@@ -6,23 +6,10 @@ require:
   kwargs:
     card: HindbrainE911Filtered
 
-include:
-  auto-annotations: all
-  categories: all
-  classes: all
-  clusters: all
-
 exclude:
   auto-annotations:
     - "@CC"
-  categories: none  # I could exclude Endomesodermal but it should never overlap with Neuroectodermal is autoannotations are good
-  classes: none
-  clusters: none
 
-timepoints: all
-
-run:
-#- type: VisualizeVelocityPunchcard
 
 comments: |
   Neuroectodermal cells that are cycling (population-wise)

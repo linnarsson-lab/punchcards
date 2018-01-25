@@ -6,22 +6,9 @@ require:
   kwargs:
     card: HindbrainE1215NonCycling
 
-include:
-  auto-annotations: all
-  categories: all
-  classes: all
-  clusters: all
-
 exclude:
   auto-annotations:
     - "@VGLUT2"
-  categories: none
-  classes: none
-  clusters: none
-
-timepoints: all
-
-run:
 
 comments: |
   Non Gluatamatergic Non Cycling Neuroectodermal cells
