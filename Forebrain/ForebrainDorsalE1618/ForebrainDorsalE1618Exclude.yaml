@@ -9,22 +9,10 @@ require:
   kwargs:
     tissue: ForebrainDorsal_E16-18
 
-include:
-  auto-annotations: all
-  categories: all
-  classes: all
-  clusters: all
-
 exclude:
-  auto-annotations: none
   categories:
     - Endomesodermal 
-  classes: none
-  clusters: none
 
-timepoints: all
-
-run:
 
 comments: |
   Neuroectodermal cells by exclusion

@@ -9,20 +9,7 @@ require:
 include:
   auto-annotations:
     - "NblInh1"
-  categories: all
-  classes: all
-  clusters: all  
 
-exclude:
-  auto-annotations: none
-  categories: none
-  classes: none
-  clusters: none
-
-timepoints: all
-
-run: 
-#- type: VisualizeVelocityPunchcard
 
 comments: |
   Cluster inhibitory types futher

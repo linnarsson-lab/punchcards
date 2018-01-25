@@ -9,20 +9,10 @@ require:
 include:
   auto-annotations:
     - VZone
-  categories: all
-  classes: all
-  clusters: all
 
 exclude:
   auto-annotations:
     - "@CC"
-  categories: none
-  classes: none
-  clusters: none
-
-timepoints: all
-
-run:
 
 comments: |
   Cluster Rgl types futher

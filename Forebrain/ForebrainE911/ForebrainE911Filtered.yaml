@@ -10,22 +10,8 @@ require:
     tissue: Forebrain_E9-11
 
 include:
-  auto-annotations: all
   categories:
     - Neuroectodermal
-  classes: all
-  clusters: all
-
-exclude:
-  auto-annotations: none
-  categories: none  # I could exclude Endomesodermal but it should never overlap with Neuroectodermal is autoannotations are good
-  classes: none
-  clusters: none
-
-timepoints: all
-
-run:
-#- type: VisualizeVelocityPunchcard
 
 comments: |
   Neuroectodermal cells

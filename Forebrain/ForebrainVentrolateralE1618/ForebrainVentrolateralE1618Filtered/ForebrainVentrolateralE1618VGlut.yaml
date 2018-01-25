@@ -11,18 +11,5 @@ include:
     - "@VGLUT1"
     - "@VGLUT2"
     - "@VGLUT3"
-  categories: all
-  classes: all
-  clusters: all
-
-exclude:
-  auto-annotations: none
-  categories: none
-  classes: none
-  clusters: none
-
-timepoints: all
-
-run: 
 
 comments: |

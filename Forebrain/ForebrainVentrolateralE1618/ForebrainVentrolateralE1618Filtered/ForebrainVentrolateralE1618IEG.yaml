@@ -9,9 +9,6 @@ require:
 include:
   auto-annotations:
     - "@IEG"
-  categories: all
-  classes: all
-  clusters: all
 
 exclude:
   auto-annotations:
@@ -19,12 +16,6 @@ exclude:
     - "@VGLUT1"
     - "@VGLUT2"
     - "@VGLUT3"
-  categories: none
-  classes: none
-  clusters: none
 
-timepoints: all
-
-run: 
 
 comments: |
