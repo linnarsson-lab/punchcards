@@ -1,5 +1,5 @@
 name: Remaining excitatory neurons from E16-18
-abbreviation: ForebrainDorsalE1618HC
+abbreviation: ForebrainDorsalE1618Excit2
 
 require:
 - type: Punchcard
