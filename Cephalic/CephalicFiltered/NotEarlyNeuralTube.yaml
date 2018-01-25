@@ -1,14 +1,14 @@
 name: Early Neural tube patterning
-abbreviation: EarlyNeuralTube
+abbreviation: NotEarlyNeuralTube
 
 require:
 - type: Punchcard
   kwargs:
     card: CephalicFiltered
 
-include:
+exclude:
   auto-annotations:
     - "@EarlyNT"
 
 comments: |
-  Subpopulation of CephalicFiltered with the class Early neaural tube
+  Subpopulation of CephalicFiltered without the class Early neaural tube
