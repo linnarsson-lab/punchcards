@@ -22,7 +22,7 @@ exclude:
 timepoints: all
 
 run: 
-- type: VisualizeVelocityPunchcard
+#- type: VisualizeVelocityPunchcard
 
 comments: |
   Cluster inhibitory types futher

@@ -25,7 +25,7 @@ exclude:
 timepoints: all
 
 run:
-- type: VisualizeVelocityPunchcard
+#- type: VisualizeVelocityPunchcard
 
 comments: |
   Subpopulation of EarlyNeuralTube that mathces patterning autoannotation that are anterior

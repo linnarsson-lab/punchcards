@@ -23,7 +23,7 @@ exclude:
 timepoints: all
 
 run:
-- type: VisualizeVelocityPunchcard
+#- type: VisualizeVelocityPunchcard
 
 comments: |
   Radialglia-like cells on the basis of quite general autoannotation are pooled in a single file and analyzed

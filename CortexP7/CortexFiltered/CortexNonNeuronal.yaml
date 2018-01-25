@@ -24,7 +24,7 @@ exclude:
 timepoints: all
 
 run:
-- type: VisualizeVelocityPunchcard
+#- type: VisualizeVelocityPunchcard
 
 comments: |
   Non-neuronal cells from P7 Cortex already filtered for neuroectodermal

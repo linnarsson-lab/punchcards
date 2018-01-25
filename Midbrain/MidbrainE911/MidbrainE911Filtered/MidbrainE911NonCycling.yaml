@@ -22,7 +22,7 @@ exclude:
 timepoints: all
 
 run:
-- type: VisualizeVelocityPunchcard
+#- type: VisualizeVelocityPunchcard
 
 comments: |
   Neuroectodermal cells that are not cycling (population-wise)
