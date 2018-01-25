@@ -6,7 +6,6 @@ require:
   kwargs:
     card: HindbrainE1215Filtered
 
-
 exclude:
   auto-annotations:
     - "@CC"

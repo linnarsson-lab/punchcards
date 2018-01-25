@@ -6,22 +6,10 @@ require:
   kwargs:
     card: MidbrainE1215Filtered
 
-include:
-  auto-annotations: all
-  categories: all
-  classes: all
-  clusters: all
-
 exclude:
   auto-annotations:
     - "@CC"
-  categories: none
-  classes: none
-  clusters: none
 
-timepoints: all
-
-run:
 
 comments: |
   Non Cycling Neuroectodermal cells

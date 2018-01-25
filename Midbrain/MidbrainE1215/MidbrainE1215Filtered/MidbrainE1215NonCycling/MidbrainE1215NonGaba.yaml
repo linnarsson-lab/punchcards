@@ -6,22 +6,10 @@ require:
   kwargs:
     card: MidbrainE1215NonCycling
 
-include:
-  auto-annotations: all
-  categories: all
-  classes: all
-  clusters: all
-
 exclude:
   auto-annotations:
     - "@GABA"
-  categories: none
-  classes: none
-  clusters: none
 
-timepoints: all
-
-run:
 
 comments: |
   Non Gabaergic Non Cycling Neuroectodermal cells
