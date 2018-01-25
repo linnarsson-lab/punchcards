@@ -1,0 +1,14 @@
+name: Cluster 14 from Forebrain dorsal E16-18
+abbreviation: ForebrainDorsalE1618C14
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618Excit
+
+include:
+  clusters:
+    - 14
+
+comments: |
+  cannot identify markers for cluster 14 due to outlier cells 
