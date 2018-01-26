@@ -17,6 +17,5 @@ exclude:
     - "@VGLUT2"
     - "@VGLUT3"
 
-
 comments: |
-All cycling cells should also be annotated with "IEG"
+  All cycling cells should also be annotated with "IEG"
