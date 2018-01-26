@@ -6,9 +6,9 @@ require:
   kwargs:
     card: ForebrainDorsalE1618Excit
 
-include:
-  clusters:
-    - 14
+exclude:
+  categories: Neuroectodermal
 
 comments: |
-  cannot identify markers for cluster 14 due to outlier cells 
+  cannot identify markers for cluster 14 due to outlier cells. This cluster has no auto-annotation.
+  I am trying to isolate it by excluding all neuroectodermal auto-annotation.

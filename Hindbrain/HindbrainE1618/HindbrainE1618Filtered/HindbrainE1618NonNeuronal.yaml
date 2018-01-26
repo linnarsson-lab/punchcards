@@ -1,0 +1,16 @@
+name: Non-neuronal cells from HindbrainE1618
+abbreviation: HindbrainE1618NonNeuronal
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1618Filtered
+
+exclude:
+  categories: 
+    - "@GABA"
+    - "@VGLUT1"
+    - "@VGLUT2"
+    - "@VGLUT3"
+
+comments: |

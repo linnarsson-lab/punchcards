@@ -1,0 +1,17 @@
+name: Neuronal cells from HindbrainE1618
+abbreviation: HindbrainE1618Neuronal
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1618Filtered
+
+include:
+  categories: 
+    - "@GABA"
+    - "@VGLUT1"
+    - "@VGLUT2"
+    - "@VGLUT3"
+    - "@GLY"
+
+comments: |
