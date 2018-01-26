@@ -1,5 +1,5 @@
-name: Selecting IEG cells from Forebrain Ventrolateral E16-18
-abbreviation: ForebrainVentrolateralE1618IEG
+name: Selecting cycling cells from Forebrain Ventrolateral E16-18
+abbreviation: ForebrainVentrolateralE1618_cycling
 
 require:
 - type: Punchcard
@@ -8,7 +8,7 @@ require:
 
 include:
   auto-annotations:
-    - "@IEG"
+    - "@CC"
 
 exclude:
   auto-annotations:
@@ -19,3 +19,4 @@ exclude:
 
 
 comments: |
+All cycling cells should also be annotated with "IEG"
