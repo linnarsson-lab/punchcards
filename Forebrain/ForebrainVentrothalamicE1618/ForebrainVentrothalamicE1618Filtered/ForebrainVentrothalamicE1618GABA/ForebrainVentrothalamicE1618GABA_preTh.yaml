@@ -1,5 +1,5 @@
 name: Splitting GABA neurons from Forebrain Ventrothalamic E16-18
-abbreviation: ForebrainVentrothalamicE1618_cycling
+abbreviation: ForebrainVentrothalamicE1618GABA_preTh
 
 require:
 - type: Punchcard
@@ -8,6 +8,6 @@ require:
 
 include:
   auto-annotations:
-    - "@CC"
+    - preTh
 
 comments: |
