@@ -1,0 +1,15 @@
+name: Glutamatergic cells from HindbrainE1618 Neuronal
+abbreviation: HindbrainE1618Glut
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1618Neuronal
+
+include:
+  categories: 
+    - "@VGLUT1"
+    - "@VGLUT2"
+    - "@VGLUT3"
+
+comments: |

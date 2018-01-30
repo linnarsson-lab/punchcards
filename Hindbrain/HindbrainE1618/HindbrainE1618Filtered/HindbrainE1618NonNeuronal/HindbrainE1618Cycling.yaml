@@ -1,0 +1,13 @@
+name: Cycling cells from HindbrainE1618 non-neuronal
+abbreviation: HindbrainE1618Cycling
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1618NonNeuronal
+
+include:
+  categories: 
+    - "@CC"
+
+comments: |
