@@ -7,7 +7,7 @@ require:
     card: HindbrainE1618Filtered
 
 include:
-  categories: 
+  auto-annotations: 
     - "@GABA"
     - "@VGLUT1"
     - "@VGLUT2"

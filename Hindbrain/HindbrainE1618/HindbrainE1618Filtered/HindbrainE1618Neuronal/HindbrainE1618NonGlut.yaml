@@ -7,7 +7,7 @@ require:
     card: HindbrainE1618Neuronal
 
 exclude:
-  categories: 
+  auto-annotations: 
     - "@VGLUT1"
     - "@VGLUT2"
     - "@VGLUT3"

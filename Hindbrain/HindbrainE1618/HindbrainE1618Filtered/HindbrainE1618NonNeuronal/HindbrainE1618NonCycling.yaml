@@ -7,7 +7,7 @@ require:
     card: HindbrainE1618NonNeuronal
 
 exclude:
-  categories: 
+  auto-annotations: 
     - "@CC"
 
 comments: |

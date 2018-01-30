@@ -7,10 +7,11 @@ require:
     card: HindbrainE1618Filtered
 
 exclude:
-  categories: 
+  auto-annotations: 
     - "@GABA"
     - "@VGLUT1"
     - "@VGLUT2"
     - "@VGLUT3"
+    - "@GLY"
 
 comments: |
