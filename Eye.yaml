@@ -1,0 +1,17 @@
+name: Eye or optic cup
+abbreviation: Eye
+
+require:
+- type: Level1
+  kwargs:
+    project: Development
+
+include:
+  auto-annotations: 
+    - "OptC"
+    - "@Eye"
+
+timepoints: all
+
+comments: |
+  punchcard includes all eye and optic cup auto-annotation
