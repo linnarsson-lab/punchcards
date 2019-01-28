@@ -1,0 +1,33 @@
+name: Neural progenitors from radial glia like cells
+abbreviation: NProgLike
+
+require:
+- type: Punchcard
+  kwargs:
+    card: RadialgliaLike
+
+include:
+  auto-annotation:
+    - NbHin8
+    - NProgF
+    - NbIntFVL6
+    - NIPC
+    - NbFor5
+    - NbMSN
+    - CrNerv
+
+exclude:
+  auto-annotation:
+    - Astro3
+    - rAC
+    - Astro1
+    - Astro2
+    - AC-NFP
+    - "@AEP"
+    - EPN-T
+    - EPN
+    - COP
+    - OPC
+
+comments: |
+  Selecting astrocytes from radial glia pool

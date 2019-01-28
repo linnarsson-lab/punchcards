@@ -1,0 +1,32 @@
+name: Neuronal
+abbreviation: Neuronal
+
+require:
+- type: Level1Analysis
+  kwargs:
+    project: Development
+
+include:
+  categories: 
+    - Neuronal
+
+exclude:
+  auto-annotations: 
+    - Rgl
+    - HRgl1
+    - HRgl3
+    - Rgl2
+    - RglF2
+    - RglH1
+    - RglM2
+    - MRgl3
+    - Rgl2c
+    - Astro3
+    - rAC
+    - Astro1
+    - Astro2
+    - AC-NFP
+    - "@AEP"
+
+comments: |
+  All neuronal cells in the Level1Analysis

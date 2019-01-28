@@ -2,28 +2,27 @@ name: The Radialglia-like cells analysis
 abbreviation: RadialgliaLike
 
 require:
-- type: Level1
+- type: Level1Analysis
   kwargs:
-    target: All
-    time: E7-E18
+    project: Development
 
 include:
-  auto-annotations: all
-  categories:
-    - Radialglialike
-  classes: all
-  clusters: all
-
-exclude:
-  auto-annotations: none
-  categories: none
-  classes: none
-  clusters: none
-
-timepoints: all
-
-run:
-#- type: VisualizeVelocityPunchcard
+  auto-annotations: 
+    - Rgl
+    - HRgl1
+    - HRgl3
+    - Rgl2
+    - RglF2
+    - RglH1
+    - RglM2
+    - MRgl3
+    - Rgl2c
+    - Astro3
+    - rAC
+    - Astro1
+    - Astro2
+    - AC-NFP
+    - "@AEP"
 
 comments: |
   Radialglia-like cells on the basis of quite general autoannotation are pooled in a single file and analyzed

@@ -1,0 +1,19 @@
+name: ALl forebrain pooled
+abbreviation: Forebrain
+
+require:
+- type: Level1Analysis
+  kwargs:
+    tissue: 
+      - Forebrain_E9-11
+      - ForebrainDorsal_E12-15
+      - ForebrainDorsal_E16-18
+      - ForebrainVentral_E12-15
+      - ForebrainVentral_E16-18
+
+exclude:
+  categories: 
+    - endomesodermal
+
+comments: |
+  All forebrain in the Level1Analysis without endomesodermal cells

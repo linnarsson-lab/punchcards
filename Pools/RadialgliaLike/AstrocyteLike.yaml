@@ -1,0 +1,34 @@
+name: Astrocyte-like among the radial-glia like pool
+abbreviation: EarlyForebrain
+
+require:
+- type: Punchcard
+  kwargs:
+    card: RadialgliaLike
+
+include:
+  auto-annotation:
+    - Astro3
+    - rAC
+    - Astro1
+    - Astro2
+    - AC-NFP
+    - "@AEP"
+    - EPN-T
+    - EPN
+
+exclude:
+  auto-annotation:
+    - NbHin8
+    - NProgF
+    - NbIntFVL6
+    - NIPC
+    - NbFor5
+    - NbMSN
+    - CrNerv
+    - COP
+    - OPC
+
+comments: |
+  Selecting astrocytes from radial glia pool
+  also ependymal
