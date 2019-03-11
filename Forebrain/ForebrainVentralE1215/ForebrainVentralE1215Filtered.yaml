@@ -13,6 +13,10 @@ include:
   categories:
     - Neuroectodermal
 
+exclude:
+  categories:
+    - Endomesodermal
+
 comments: |
   Neuroectodermal cells
   Selected using categories

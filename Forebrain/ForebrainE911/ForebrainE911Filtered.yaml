@@ -9,10 +9,14 @@ require:
   kwargs:
     tissue: Forebrain_E9-11
 
+include:
+  categories:
+    - Neuroectodermal
+
 exclude:
   categories:
     - Endomesodermal
 
 comments: |
   Neuroectodermal cells
-  Selected using categories and excluded endomesodermal cells
+  Selected using categories

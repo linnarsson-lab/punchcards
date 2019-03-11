@@ -10,14 +10,12 @@ require:
     tissue: Cortex_P7
 
 include:
-
   categories:
     - Neuroectodermal
 
 exclude:
   categories:
     - Endomesodermal
-
 
 comments: |
   Neuroectodermal cells
