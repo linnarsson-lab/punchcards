@@ -1,5 +1,5 @@
 name: ALl forebrain pooled
-abbreviation: Forebrain
+abbreviation: ForebrainPool
 
 require:
 - type: Level1Analysis
@@ -9,7 +9,9 @@ require:
       - ForebrainDorsal_E12-15
       - ForebrainDorsal_E16-18
       - ForebrainVentral_E12-15
-      - ForebrainVentral_E16-18
+      - ForebrainVentrolateral_E16-18
+      - ForebrainVentrothalamic_E16-18
+
 
 exclude:
   categories: 
