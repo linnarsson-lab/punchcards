@@ -16,6 +16,8 @@ include:
 exclude:
   categories:
     - Endomesodermal
+  auto-annotations:
+    - "@Cldn"
 
 comments: |
   Neuroectodermal cells
