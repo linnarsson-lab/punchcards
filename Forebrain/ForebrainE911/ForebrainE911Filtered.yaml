@@ -16,6 +16,9 @@ include:
 exclude:
   categories:
     - Endomesodermal
+  auto-annotations:
+    - EcFace
+    - Nose
 
 comments: |
   Neuroectodermal cells

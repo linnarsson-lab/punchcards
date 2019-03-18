@@ -1,5 +1,5 @@
 name: Selecting the Neural cell types from Forebrain Dorsal E16-E18
-abbreviation: ForebrainDorsalE1618Exclude
+abbreviation: ForebrainDorsalE1618Filtered
 
 require:
 - type: ClusterL1
