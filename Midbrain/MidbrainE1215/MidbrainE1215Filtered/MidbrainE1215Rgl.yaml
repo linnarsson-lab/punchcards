@@ -1,0 +1,14 @@
+name: Select the radial glia from Midbrain E12-15
+abbreviation: MidbrainE1215Rgl
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE1215Filtered
+
+include:
+  auto-annotations:
+    - Rgl
+
+comments: |
+
