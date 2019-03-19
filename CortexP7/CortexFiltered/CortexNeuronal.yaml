@@ -13,8 +13,10 @@ include:
 exclude:
   auto-annotations:
     - "@AEP"
-    - "OPC"
-    - "COP"
+    - OPC
+    - COP
+    - Rgl2c
+    - "@OL"
 
 comments: |
   Neuronal cells from P7 Cortex already filtered for neuroectodermal

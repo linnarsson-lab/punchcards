@@ -1,0 +1,14 @@
+name: Select the radial glia from Forebrain Ventral E12-E15
+abbreviation: ForebrainVentralE1215Rgl
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentralE1215Filtered
+
+include:
+  auto-annotations:
+    - Rgl
+
+comments: |
+
