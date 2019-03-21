@@ -1,0 +1,14 @@
+name: Radial glia that might generate neurons
+abbreviation: HindbrainE1215NeuralRgl
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215Rgl
+
+exclude:
+  auto-annotations:
+    - Rgl2
+    - Rgl2c
+
+comments: |

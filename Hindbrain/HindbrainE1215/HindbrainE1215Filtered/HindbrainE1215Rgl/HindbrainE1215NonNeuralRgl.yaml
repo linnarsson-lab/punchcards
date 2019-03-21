@@ -1,0 +1,14 @@
+name: Radial glia that might generate glia
+abbreviation: HindbrainE1215NonNeuralRgl
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215Rgl
+
+include:
+  auto-annotations:
+    - Rgl2
+    - Rgl2c
+
+comments: |

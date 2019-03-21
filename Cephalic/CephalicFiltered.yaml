@@ -12,6 +12,8 @@ require:
 include:
   categories:
     - Neuroectodermal
+  auto-annotations:
+    - "@PNT"
 
 exclude:
   categories:
