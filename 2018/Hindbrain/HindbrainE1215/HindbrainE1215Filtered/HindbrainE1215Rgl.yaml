@@ -1,0 +1,14 @@
+name: Select the radial glia from Hindbrain E12-15
+abbreviation: HindbrainE1215Rgl
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215Filtered
+
+include:
+  auto-annotations:
+    - Rgl
+
+comments: |
+

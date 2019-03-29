@@ -1,0 +1,25 @@
+name: Selecting the primitive-streak cell types from Cephalic dataset
+abbreviation: CephalicPrimitiveStreak
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: Cephalic_E7-8
+- type: ExportL1
+  kwargs:
+    tissue: Cephalic_E7-8
+
+include:
+  clusters:
+    - 5
+    - 6
+    - 7
+    - 9
+    - 10
+    - 11
+    - 12
+    - 2
+    - 3
+    - 4
+
+comments: |

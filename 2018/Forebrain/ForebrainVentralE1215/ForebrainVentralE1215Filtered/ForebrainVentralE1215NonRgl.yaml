@@ -1,0 +1,14 @@
+name: Exclude the radial glia from Forebrain Ventral E12-E15
+abbreviation: ForebrainVentralE1215NonRgl
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentralE1215Filtered
+
+exclude:
+  auto-annotations:
+    - Rgl
+
+comments: |
+

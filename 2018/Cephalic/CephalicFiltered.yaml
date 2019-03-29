@@ -1,0 +1,30 @@
+name: Selecting the Neural cell types from Cephalic dataset
+abbreviation: CephalicFiltered
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: Cephalic_E7-8
+- type: ExportL1
+  kwargs:
+    tissue: Cephalic_E7-8
+
+include:
+  categories:
+    - Neuroectodermal
+    - Neuroepithelial
+
+exclude:
+  auto-annotations:
+    - "@Cldn"
+    - PSC
+    - PERI
+    - PxMeso
+    - CNC
+    - HinNC
+    - DelaNC
+    - MesNC
+
+comments: |
+  Neuroectodermal cells
+  Selected using categories

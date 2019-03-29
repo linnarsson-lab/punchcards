@@ -1,0 +1,29 @@
+name: Selecting the Neural cell types from Forebrain E9-E11
+abbreviation: ForebrainE911Filtered
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: Forebrain_E9-11
+- type: ExportL1
+  kwargs:
+    tissue: Forebrain_E9-11
+
+include:
+  categories:
+    - Neuroectodermal
+
+exclude:
+  categories:
+    - Endomesodermal
+  auto-annotations:
+    - EcFace
+    - Nose
+    - CNC
+    - HinNC
+    - DelaNC
+    - MesNC
+
+comments: |
+  Neuroectodermal cells
+  Selected using categories

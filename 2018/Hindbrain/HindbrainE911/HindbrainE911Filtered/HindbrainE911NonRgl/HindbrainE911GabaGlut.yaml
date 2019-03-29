@@ -1,0 +1,14 @@
+name: Selecting @GABA and @VGLUT2 neurons from Hindbrain E9-11
+abbreviation: HindbrainE911GabaGlut
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE911NonRgl
+
+include:
+  auto-annotations:
+    - "@VGLUT2"
+    - "@GABA"
+
+comments: |

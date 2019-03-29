@@ -1,0 +1,14 @@
+name: Exclude the radial glia from Hindbrain E9-11
+abbreviation: HindbrainE911NonRgl
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE911Filtered
+
+exclude:
+  auto-annotations:
+    - Rgl
+
+comments: |
+

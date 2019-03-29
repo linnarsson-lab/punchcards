@@ -1,0 +1,28 @@
+name: Selecting the Neural cell types from Hindbrain E9-E11
+abbreviation: HindbrainE911Filtered
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: Hindbrain_E9-11
+- type: ExportL1
+  kwargs:
+    tissue: Hindbrain_E9-11
+
+include:
+  categories:
+    - Neuroectodermal
+
+exclude:
+  categories:
+    - Endomesodermal
+  auto-annotations:
+    - "@Cldn"
+    - CNC
+    - HinNC
+    - DelaNC
+    - MesNC
+
+comments: |
+  Neuroectodermal cells
+  Selected using categories

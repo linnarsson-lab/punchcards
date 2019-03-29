@@ -1,0 +1,27 @@
+name: Selecting the Neural cell types from Forebrain E12-E15
+abbreviation: ForebrainVentralE1215Filtered
+
+require:
+- type: ClusterL1
+  kwargs:
+    tissue: ForebrainVentral_E12-15
+- type: ExportL1
+  kwargs:
+    tissue: ForebrainVentral_E12-15
+
+include:
+  categories:
+    - Neuroectodermal
+
+exclude:
+  categories:
+    - Endomesodermal
+  auto-annotations:
+    - CNC
+    - HinNC
+    - DelaNC
+    - MesNC
+
+comments: |
+  Neuroectodermal cells
+  Selected using categories
