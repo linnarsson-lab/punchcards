@@ -1,0 +1,15 @@
+name: Cajal retzius, OB-OEC, and CHRD
+abbreviation: ForebrainDorsalE1618Other
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618Filtered
+
+include:
+  auto-annotations:
+    - CRC
+    - OB-OEC
+    - CHRD
+
+comments: |

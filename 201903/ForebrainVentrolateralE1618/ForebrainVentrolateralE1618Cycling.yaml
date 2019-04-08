@@ -1,0 +1,14 @@
+name: Cycling cells from ForebrainVentrolateralE1618
+abbreviation: ForebrainVentrolateralE1618Cycling
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrolateralE1618Filtered
+
+include:
+  auto-annotations:
+    - "@CC"
+    - Rgl
+
+comments: |

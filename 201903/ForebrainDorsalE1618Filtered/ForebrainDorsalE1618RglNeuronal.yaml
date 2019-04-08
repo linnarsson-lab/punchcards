@@ -1,0 +1,15 @@
+name: Radial glia, NIPC, Excitatory and Inhibitory Neurons
+abbreviation: ForebrainDorsalE1618RglNeuronal
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618Filtered
+
+exclude:
+  auto-annotations:
+    - CRC
+    - OB-OEC
+    - CHRD
+
+comments: |

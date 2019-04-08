@@ -1,0 +1,18 @@
+name: Excitatory neurons
+abbreviation: ForebrainVentrolateralE1618Excitatory
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrolateralE1618Filtered
+
+exclude:
+  auto-annotations:
+    - CRC
+    - OB-OEC
+    - "@GABA"
+    - MSN4
+    - "@CC"
+    - Rgl
+
+comments: |

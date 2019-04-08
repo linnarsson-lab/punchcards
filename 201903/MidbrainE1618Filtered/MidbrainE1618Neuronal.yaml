@@ -1,0 +1,18 @@
+name: Midbrain E16-18 Neurons
+abbreviation: MidbrainE1618Neuronal
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE1618Filtered
+
+exclude:
+  auto-annotations:
+    - Rgl
+    - Rgl2c
+    - SchLike
+    - "@CC"
+    - CHRD
+    - "@AEP"
+
+comments: |

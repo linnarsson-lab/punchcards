@@ -1,0 +1,14 @@
+name: Cycling and other cells
+abbreviation: ForebrainVentrothalamicE1618Other
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrothalamicE1618Filtered
+
+exclude:
+  auto-annotations:
+    - "@GABA"
+    - "@VGLUT2"
+
+comments: |

@@ -1,0 +1,14 @@
+name: Cajal-Retzius and OB-OECs from ForebrainVentrolateralE1618
+abbreviation: ForebrainVentrolateralE1618Other
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrolateralE1618Filtered
+
+include:
+  auto-annotations:
+    - CRC
+    - OB-OEC
+
+comments: |

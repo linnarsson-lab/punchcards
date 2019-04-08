@@ -1,0 +1,13 @@
+name: Excitatory neurons
+abbreviation: ForebrainVentrothalamicE1618Excitatory
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentrothalamicE1618Filtered
+
+include:
+  auto-annotations:
+    - "@VGLUT2"
+
+comments: |
