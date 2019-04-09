@@ -9,6 +9,8 @@ require:
 exclude:
   auto-annotations:
     - Rgl
+    - CHRD
+    - Chrd
 
 comments: |
 

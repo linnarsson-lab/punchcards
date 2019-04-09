@@ -11,4 +11,11 @@ include:
     - "@CC"
     - Rgl
 
+exclude:
+  auto-annotations:
+    - "@GABA"
+    - "@VGLUT2"
+    - CRC
+    - OB-OEC
+
 comments: |

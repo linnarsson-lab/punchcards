@@ -9,6 +9,8 @@ require:
 include:
   auto-annotations:
     - Rgl
+    - CHRD
+    - Chrd
 
 comments: |
   Neuroectodermal cycling cells
