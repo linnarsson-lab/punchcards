@@ -11,8 +11,10 @@ include:
     - Rgl
     - Rgl2c
     - SchLike
-    - "@CC"
+    - "@OL"
+    - COP
     - CHRD
     - "@AEP"
+    - Astro2
 
 comments: |

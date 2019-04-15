@@ -1,0 +1,14 @@
+name: Non-neuronal neurons from Forebrain Dorsal E16-18
+abbreviation: ForebrainDorsalE1618NonNeuronal
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618RglNeuronal
+
+include:
+  auto-annotations:
+    - Rgl
+    - Rgl2c
+
+comments: |

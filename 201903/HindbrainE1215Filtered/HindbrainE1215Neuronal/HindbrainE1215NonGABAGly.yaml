@@ -1,0 +1,16 @@
+name: Exclude GABAergic and glycinergic neuronal cells from Hindbrain E12-15
+abbreviation: HindbrainE1215NonGABAGly
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215Neuronal
+
+exclude:
+  auto-annotations:
+    - "@GABA"
+    - "@GLY"
+
+comments: |
+
+

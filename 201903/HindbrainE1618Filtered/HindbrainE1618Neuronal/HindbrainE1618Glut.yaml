@@ -1,0 +1,22 @@
+name: Select glutamatergic cells from Hindbrain E16-18 Neuronal
+abbreviation: HindbrainE1618Glut
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1618Neuronal
+
+include:
+  auto-annotations:
+    - "@RDie"
+    - "@VGLUT2"
+    - "@XIN"
+  
+exclude:
+  auto-annotations:
+    - "@CC"
+    
+comments: |
+
+
+

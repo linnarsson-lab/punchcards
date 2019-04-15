@@ -1,0 +1,15 @@
+name: Radial glia that might generate neurons
+abbreviation: HindbrainE1215Other
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1215NonNeuronal
+
+include:
+  auto-annotations:
+    - CHRD
+    - Chrd
+    - SchLike
+
+comments: |

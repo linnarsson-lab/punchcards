@@ -1,0 +1,15 @@
+name: Select VGlut2 and upper layer neurons from Forebrain Ventral E12-E15 NonRgl
+abbreviation: ForebrainVentralE1215Excitatory
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainVentralE1215NonRgl
+
+include:
+  auto-annotations:
+    - "@VGLUT2"
+    - LUpper
+
+comments: |
+

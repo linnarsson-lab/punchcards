@@ -1,0 +1,16 @@
+name: Select excitatory neurons from Forebrain Dorsal E12-E15 Non Rgl
+abbreviation: ForebrainDorsalE1215Excitatory
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1215NonRgl
+
+exclude:
+  auto-annotations:
+    - "@GABA"
+    - NbMSN
+    - CRC
+
+comments: |
+

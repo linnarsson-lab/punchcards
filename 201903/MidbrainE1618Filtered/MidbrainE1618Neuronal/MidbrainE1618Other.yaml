@@ -1,0 +1,17 @@
+name: Select other cells from Midbrain E16-18 Neuronal cells
+abbreviation: MidbrainE1618Other
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE1618Neuronal
+
+exclude:
+  auto-annotations:
+    - "@VGLUT2"
+    - ERY
+    - "@GABA"
+    - "@GLY"
+
+
+comments: |

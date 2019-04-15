@@ -1,0 +1,13 @@
+name: Inhibitory neurons from Forebrain Dorsal E16-18
+abbreviation: ForebrainDorsalE1618Inhibitory
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618RglNeuronal
+
+include:
+  auto-annotations:
+    - "@GABA"
+
+comments: |

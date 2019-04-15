@@ -1,0 +1,14 @@
+name: Select GABAergic neurons from Midbrain E9-11
+abbreviation: MidbrainE911GABA
+
+require:
+- type: Punchcard
+  kwargs:
+    card: MidbrainE911NonRgl
+
+include:
+  auto-annotations:
+    - "@GABA"
+
+comments: |
+

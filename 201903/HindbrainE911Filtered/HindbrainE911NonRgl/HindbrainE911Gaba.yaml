@@ -1,0 +1,13 @@
+name: Selecting @GABA neurons from Hindbrain E9-11
+abbreviation: HindbrainE911Gaba
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE911NonRgl
+
+include:
+  auto-annotations:
+    - "@GABA"
+
+comments: |

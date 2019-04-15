@@ -1,0 +1,14 @@
+
+name: Inhibitory cells from the cortex 
+abbreviation: CortexInhibitory
+
+require:
+- type: Punchcard
+  kwargs:
+    card: CortexFiltered
+
+include:
+  auto-annotations:
+    - "@GABA"
+
+comments: |

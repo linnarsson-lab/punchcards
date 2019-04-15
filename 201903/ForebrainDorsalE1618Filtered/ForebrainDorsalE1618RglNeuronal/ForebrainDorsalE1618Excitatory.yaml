@@ -1,0 +1,15 @@
+name: Excitatory neurons from Forebrain Dorsal E16-18
+abbreviation: ForebrainDorsalE1618Excitatory
+
+require:
+- type: Punchcard
+  kwargs:
+    card: ForebrainDorsalE1618RglNeuronal
+
+exclude:
+  auto-annotations:
+    - "@GABA"
+    - Rgl
+    - Rgl2c
+
+comments: |

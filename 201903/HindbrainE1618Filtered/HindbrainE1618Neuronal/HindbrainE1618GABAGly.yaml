@@ -1,0 +1,20 @@
+name: Select glycinergic cells from Hindbrain E16-18 Neuronal
+abbreviation: HindbrainE1618GABAGly
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1618Neuronal
+
+include:
+  auto-annotations:
+    - "@GLY"
+    - Glyc-Skor1
+    - "@GABA"
+
+exclude:
+  auto-annotations:
+    - "@VGLUT2"
+    
+comments: |
+

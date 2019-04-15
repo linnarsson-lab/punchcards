@@ -1,0 +1,18 @@
+name: Select cycling cells from Hindbrain E16-18 Neuronal
+abbreviation: HindbrainE1618NeuronalCycling
+
+require:
+- type: Punchcard
+  kwargs:
+    card: HindbrainE1618Neuronal
+
+include:
+  auto-annotations:
+    - "@CC"
+
+exclude:
+  auto-annotations:
+    - "@GLY"
+
+comments: |
+

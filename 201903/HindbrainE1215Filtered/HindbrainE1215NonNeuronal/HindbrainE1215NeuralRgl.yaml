@@ -4,11 +4,14 @@ abbreviation: HindbrainE1215NeuralRgl
 require:
 - type: Punchcard
   kwargs:
-    card: HindbrainE1215Rgl
+    card: HindbrainE1215NonNeuronal
 
 exclude:
   auto-annotations:
     - Rgl2
     - Rgl2c
+    - CHRD
+    - Chrd
+    - SchLike
 
 comments: |
