@@ -39,26 +39,26 @@ A `punchcard` looks like this:
 ```yaml
 name: Selecting motor/gly/ser/chol/th neurons from Hindbrain E9-11
 abbreviation: HindbrainE911MiscNeurons
- 
+
 require:
 - type: Punchcard
   kwargs:
-	card: HindbrainE911NonRgl
+  card: HindbrainE911NonRgl
  
 include:
   auto-annotations:
-	- "@GLY"
-	- HinSert
-	- VscMN
-	- SpMN
-	- CrMN
-	- "@CHOL"
+  - "@GLY"
+  - HinSert
+  - VscMN
+  - SpMN
+  - CrMN
+  - "@CHOL"
  
 exclude:
   auto-annotations:
-	- "@VGLUT2"
-	- "@GABA"
- 
+  - "@VGLUT2"
+  - "@GABA"
+
 comments: |
 ```
 
