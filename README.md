@@ -1,11 +1,27 @@
 # Punchcards
 
 ``punchcards`` is a repository containing description files to feed to cytograph `punchcards` analysis pipeline.
+It contains the collection of all the semi-automated analyses performed on the developmental brain atlas dataset.
 
-``punchcards`` will contain a complete collection of all the sub-analysis performed on the developmental brain atlas dataset.
+## What is a punchcard?
 
-# Curiosity/History
-[Punch cards]((https://en.wikipedia.org/wiki/Punched_card#History)) were one of the first means to store digital information, in particular automata instructions/inputs. Noticeably the earliest automatic [loom](https://github.com/linnarsson-lab/loompy) was controlled by punched holes in a paper tape.
+A Punchcard is a recipe, a text file containing a brief set of instructions that fully define a semi-automated single-cell RNA-seq data. 
+
+Punchcards take advantage of the automatic labeling capabilities of the auto-annotation framework amnd of the streamlined cytograph pipeline to implement a declarative, transparent, rule-based splitting procedure to perform analysis of specific subsets of the data. 
+
+A punchcard defines an analysis pipeline by specifying the parent analysis to use as input and the auto-annotation labels that identify the subset of clusters to analyse.
+
+## What is the philosophy?
+
+Clustering a diverse single-cell dataset might result in only a rough representation of its heterogeneity, with interesting differences remaining concealed. Such a resolution limit is an intrinsic limitation of an analysis that aims to balance global and local similarities. Therefore, it is not uncommon that the reanalysis of a few clusters reveals more considerable heterogeneity than what could be appreciated at a global level. In particular, repeating feature selection and dimensionality reduction on a more homogeneous set of cells often highlights further structure.
+
+To extract the most information from a dataset, adopting an iterative divide-and-conquer approach is sensible. This strategy involves starting from a global clustering, then splitting clusters into a few partitions and iteratively repeating the procedure on each partition, until a stopping condition is met. However, how to partition the clusters at each iteration remains an open issue. Performing the partitioning in a supervised way has the advantage of allowing for the use of biological knowledge to expose particularly interesting aspects of the heterogeneity even when low signal-to-noise ratio makes them potentially difficult to highlight. A challenge is that those decisions quickly become verbose to describe, difficult to inspect, and harder to evaluate as the size of the dataset grows (e.g., instructions like analyze clusters 1-4 with 5-8). Finally, the approach requires continuous manual intervention at each rerun of the analysis.
+
+
+## How does a Punchcard look?
+
+A punchcard consists of a human-readable yaml-formated file with the three fields: *require, include and exclude* defining the subset of cells to reanalyze, and the fields name, abbreviation and comments intended for human readability. The require field is used to specify the input dataset that can be a cytograph analysis or another punchcard, thus enabling hierarchical analyses. The include and the exclude fields define rules for subsetting clusters from the parent dataset. Subsetting rules are constrained to be either a list of auto-annotation labels and categories, or a boolean array. Because those rules are not necessarily specific to a particular analysis, punchcards define a series of biologically meaningful analyses that remain general to the specific input dataset and analysis parameters. The subset of cells will influence the feature selection and the granularity of the clustering, revealing additional information about cellular variability.
+
 
 ## Analysis description files
 
@@ -21,40 +37,31 @@ luigi --workers 5 --local-scheduler --module development-mouse Punchcard --card 
 A `punchcard` looks like this:
 
 ```yaml
-name: Punchcard name extended
-abbreviation: PunchcardName
-
-requires:
-- type: Level1
+name: Selecting motor/gly/ser/chol/th neurons from Hindbrain E9-11
+abbreviation: HindbrainE911MiscNeurons
+ 
+require:
+- type: Punchcard
   kwargs:
-    target: All
-    time: E7-E18
-
+	card: HindbrainE911NonRgl
+ 
 include:
-  auto-annotations: all
-  categories: all
-  classes: all
-  clusters: all
-
+  auto-annotations:
+	- "@GLY"
+	- HinSert
+	- VscMN
+	- SpMN
+	- CrMN
+	- "@CHOL"
+ 
 exclude:
-  auto-annotations: none
-  categories: none
-  classes: none
-  clusters: none
-
-timepoints: all
-
-run:
-- type: PlotGraphProcess
-  kwargs: {}
-
+  auto-annotations:
+	- "@VGLUT2"
+	- "@GABA"
+ 
 comments: |
-  PLEASE insert a extra information.
-  This can be multiline
-
 ```
 
-# Note: the doc below is outdated
 
 ### Parent Analyses entry
 
@@ -85,8 +92,6 @@ NOTE: for now only `auto-annotations` supports the `and` logical operator. This 
         - ["@CC", MHBm]
 
 * `categories`: list, use categories to filter set of clusters that contain a certain category attribute
-* `classes`: list,  use the classifier probability found in the loom file (prob>0.5)
-* `clusters`: list,  use the cluster numbering to filter (NOTE!!! makes sense only when the source file is only one)
 * `tissues`: list, use the tissue name (as it is found in the loom column attributes)
 
 `exclude` the same as include but for excluding. default is `none`. The different types of conditions are combined by a set union operator (consider exclude == True, notexclude == False).
@@ -95,57 +100,5 @@ NOTE: for now only `auto-annotations` supports the `and` logical operator. This 
 
 The *final* filter is `(include - exclude) ∩ timepoints`
 
-## Todo Analysis
-
-It describe in a list of *lugi.Task* to be performed. They are specified as in `parent_analysis`.
-
-By default (hard-coded) *ClusterLayoutProcess*, *AutoAnnotateProcess* will be run for every process.
-
-## Comment section
-
-You can add here description of the process and relevant litterature
-
-## Example of a real analysis
-
-```yaml
-name: Early Differentiation of Neural Crest into different lineages
-abbreviation: DifferentiationNeuralCrest
-
-parent_analyses:
-- type: Level1
-  kwargs:
-    target: All
-    time: E7-E18
-
-include:
-  auto-annotations:
-    - CNC
-    - FrontM
-    - SCHWA
-    - PSN
-    - CrNerv
-
-exclude:
-  auto-annotations:
-    - GUM
-    - ["@CC", MHBm]
-
-timepoints:
-  - E8
-  - E9
-  - E10
-  - E11
-  - E12
-
-todo_analyses:
-- type: PlotGraphProcess
-  kwargs: {}
-- type: PlotGraphAgeProcess
-  kwargs: {}
-
-comments: |
-  PLEASE insert a extra information.
-  This can be multiline
-
-
-```
+## Curiosity
+[Punch cards]((https://en.wikipedia.org/wiki/Punched_card#History)) were one of the first means to store digital information, in particular automata instructions/inputs. Noticeably the earliest automatic [loom](https://github.com/linnarsson-lab/loompy) was controlled by punched holes in a paper tape.
