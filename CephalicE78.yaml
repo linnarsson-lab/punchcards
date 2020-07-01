@@ -1,0 +1,8 @@
+Filtered:
+  include: []
+  onlyif: np.isin(Clusters, [8, 9, 10, 11, 18, 19])
+PrimitiveStreak:
+  include: []
+  onlyif: np.isin(Clusters, [30, 31, 32, 33, 22, 23, 24, 25, 26])
+Other:
+  include: []

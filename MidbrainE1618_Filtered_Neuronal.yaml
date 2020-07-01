@@ -1,0 +1,7 @@
+Excitatory:
+  include: ['@VGLUT2']
+GABAGly:
+  include: ['ERY', '@GABA', '@GLY']
+Other:
+  include: []
+

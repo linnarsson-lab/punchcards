@@ -1,0 +1,6 @@
+Inhibitory:
+  include: ['@GABA', 'Dlx']
+Excitatory:
+  include: ['@VGLUT1', '@VGLUT2', 'CRC']
+NonNeuronal:
+  include: []

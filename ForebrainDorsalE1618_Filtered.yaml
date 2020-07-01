@@ -1,0 +1,9 @@
+CRCOB:
+  include: ['CRC', 'OB-OEC']
+NonNeuronal:
+  include: ['Rgl', 'Rgl2c', 'RglFb', 'RglMHb']
+Inhibitory:
+  include: ['@GABA', 'Dlx']
+Excitatory:
+  include: []
+

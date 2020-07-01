@@ -1,0 +1,6 @@
+GabaGlut:
+  include: ['@VGLUT2', '@GABA']
+MiscNeurons:
+  include: ['@GLY', 'HinSert', 'VscMN', 'SpMN', 'CrMN', '@CHOL']
+Other:
+  include: []

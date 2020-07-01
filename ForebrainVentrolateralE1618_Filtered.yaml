@@ -1,0 +1,9 @@
+CRCOB:
+  include: ['CRC', 'OB-OEC']
+Inhibitory:
+  include: ['@GABA', 'Dlx']
+CyclingRgl:
+  include: ['@CC', 'Rgl', 'RglFb', 'RglMHb', 'Rgl2c']
+Excitatory:
+  include: []
+
