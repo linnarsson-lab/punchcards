@@ -7,9 +7,9 @@ It contains the collection of all the semi-automated analyses performed on the d
 
 A Punchcard is a recipe, a text file containing a brief set of instructions that fully define a semi-automated single-cell RNA-seq data. 
 
-Punchcards take advantage of the automatic labeling capabilities of the auto-annotation framework amnd of the streamlined cytograph pipeline to implement a declarative, transparent, rule-based splitting procedure to perform analysis of specific subsets of the data. 
+Punchcards take advantage of the automatic labeling capabilities of the [auto-annotation](https://github.com/linnarsson-lab/auto-annotations) framework and of the streamlined [cytograph](https://github.com/linnarsson-lab/cytograph) pipeline to implement a declarative, transparent, rule-based splitting procedure to perform analysis of specific subsets of the data. 
 
-A punchcard defines an analysis pipeline by specifying the parent analysis to use as input and the auto-annotation labels that identify the subset of clusters to analyse.
+A punchcard defines an analysis pipeline by specifying the parent analysis to use as input and the auto-annotation labels that identify the subset of clusters to analyze.
 
 ## What is the philosophy?
 
